@@ -32,10 +32,8 @@
         </ons-toolbar>
 
 
-
-
         <ons-tabbar>
-            <ons-tab page="index.html" label="Home" badge="7" active>
+            <ons-tab page="index.html" label="Home"  active>
                 <i class="zmdi zmdi-home"></i>
             </ons-tab>
             <ons-tab page="tab2.html" label="Cart" active-icon="md-face">
@@ -51,7 +49,7 @@
                 <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)"></ons-search-input>
             </p>
 
-            <ons-carousel swipeable auto-scroll overscrollable style="width: 100vw; height: 250px;" id="carousel">
+            <ons-carousel swipeable auto-scroll overscrollable style="width: 100vw; height: 300px;" id="carousel">
                 <ons-carousel-item style="background: url('img/1.jpg')no-repeat center;background-size: contain;"></ons-carousel-item>
                 <ons-carousel-item style="background: url('img/2.jpg')no-repeat center;background-size: contain;"></ons-carousel-item>
                 <ons-carousel-item style="background: url('img/3.jpg')no-repeat center;background-size: contain;"></ons-carousel-item>
@@ -149,7 +147,38 @@
 
     <template id="tab2.html">
         <ons-page>
+            <ons-list>
+                <ons-list-header>Shopping Cart</ons-list-header>
+                <ons-list-item>
+                    <ons-row>
+                        <ons-col>
+                            <img src="img/item1.jpg" alt="">
+                        </ons-col>
+                        <ons-col>
+                                <p>Apple Watch Series 3 GPS 42mm Grey</p>
+                                <p>฿12,650.00</p>
+                        </ons-col>
+                        <ons-col>
+                                <i class="zmdi zmdi-delete"></i>
+                        </ons-col>
+                    </ons-row>
+                </ons-list-item>
 
+                <ons-list-item><ons-row>
+                        <ons-col>
+                            <img src="img/item2.jpg" alt="">
+                        </ons-col>
+                        <ons-col>
+                                <p>Microlab Speacker</p>
+                                <p>฿12,650.00</p>
+                        </ons-col>
+                        <ons-col>
+                                <i class="zmdi zmdi-delete"></i>
+                        </ons-col>
+                    </ons-row></ons-list-item>
+
+                <ons-list-item>Item B</ons-list-item>
+            </ons-list>
         </ons-page>
     </template>
 

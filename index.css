@@ -77,4 +77,12 @@
         font-weight: bold;
         padding-top: 10px;
       }
-   
+
+      .img{
+        width: 100px;
+        height: 100px;
+        
+      }
+   .item{
+     text-align: center;
+   }

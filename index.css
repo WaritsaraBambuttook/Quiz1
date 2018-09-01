@@ -55,7 +55,6 @@
         max-width: 120px;
         width: 90%;
         margin: auto;
-        background-color: rgba(128, 128, 128, 0.62);
         text-align: center;
       }
 
@@ -86,3 +85,30 @@
    .item{
      text-align: center;
    }
+   .BolckA1{
+    background-color: rgb(241, 115, 204);
+   }
+   .BolckA2{
+    background-color: rgb(198, 111, 233);
+  }
+  .BolckA3{
+    background-color: rgb(33, 233, 133);
+  }
+   .BolckB1{
+    background-color: rgb(233, 33, 173);
+   }
+   .BolckB2{
+    background-color: rgb(174, 6, 180);
+  }
+  .BolckB3{
+    background-color: rgb(148, 241, 41);
+  }
+   .BolckC1{
+     background-color: rgb(241, 41, 74);
+   }
+  .BolckC2{
+    background-color: rgb(76, 2, 105);
+  }
+  .BolckC3{
+    background-color: rgb(20, 211, 20);
+  }

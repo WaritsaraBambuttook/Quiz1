@@ -118,3 +118,6 @@
   .tabbar{
     background-color: rgb(243, 200, 147);
   }
+  .page--material__background{
+  background-color: rgb(245, 198, 243);
+}

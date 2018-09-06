@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
     <title>Shopping</title>
 </head>
 
@@ -22,7 +23,7 @@
                 </ons-toolbar-button>
             </div>
 
-            <div class="center">Home</div>
+            <div class="center" id="appname">Home</div>
 
             <div class="right">
                 <ons-toolbar-button>
@@ -50,9 +51,9 @@
             </p>
 
             <ons-carousel swipeable auto-scroll overscrollable style="width: 100vw; height: 300px;" id="carousel">
-                <ons-carousel-item style="background: url('img/1.jpg')no-repeat center;background-size: contain;"></ons-carousel-item>
-                <ons-carousel-item style="background: url('img/2.jpg')no-repeat center;background-size: contain;"></ons-carousel-item>
-                <ons-carousel-item style="background: url('img/3.jpg')no-repeat center;background-size: contain;"></ons-carousel-item>
+                <ons-carousel-item id="carousel1" style="background: url('img/1.jpg')no-repeat center;background-size: contain;"></ons-carousel-item>
+                <ons-carousel-item id="carousel2" style="background: url('img/2.jpg')no-repeat center;background-size: contain;"></ons-carousel-item>
+                <ons-carousel-item id="carousel3" style="background: url('img/3.jpg')no-repeat center;background-size: contain;"></ons-carousel-item>
             </ons-carousel>
 
             <ons-row class="category">
@@ -210,10 +211,51 @@
             </ons-list>
             <br>
             <ons-button modifier="large">large</ons-button>
-            
+
         </ons-page>
     </template>
 
 </body>
+<script> 
+    getHomeData();
+
+    //ใช้ว่า กดแทบไหนบ้าง
+    document.addEventListener('prechange', function (event) {
+
+        if (event.index == 0) {
+            console.log('Home clicked');
+            //get data for home screen
+
+
+        } else if (event.index == 1) {
+            console.log('Cart clicked');
+            //get data for cart screen
+            getCartData();
+
+        }
+        // document.querySelector('ons-toolbar .center')
+        //   .innerHTML = event.tabItem.getAttribute('label');
+    });
+
+    function getHomeData() {
+
+        $.getJSON('home.json', function (data) {
+            console.log(data);
+            $('#appname').html(data.appname);
+            var style = "background: url('img/" + data.slides[0] + "')no-repeat center;background-size: contain;";
+            $('#carousel1').attr('style', style);
+        });
+
+        
+    }
+    function getCartData() {
+
+        $.getJSON('cart.json', function (data) {
+            console.log(data);
+
+        });
+
+    }
+</script>
 
 </html>

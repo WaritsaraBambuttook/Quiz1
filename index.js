@@ -13,3 +13,4 @@ ons.ready(function () {
         console.log('Changed to ' + event.activeIndex)
     });
 });
+
